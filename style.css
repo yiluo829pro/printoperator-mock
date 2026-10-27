@@ -26,3 +26,5 @@ button{scroll-margin-block:100px}.presenter{pointer-events:none}.presenter butto
 @media(min-width:1500px){.reviewgrid{grid-template-columns:minmax(400px,1fr) 260px 400px}}
 @media(min-width:651px) and (max-width:950px){.reviewgrid{grid-template-columns:minmax(280px,1fr) 220px}.reviewgrid>.reviewdecision{grid-column:1/-1;grid-row:2}}
 @media(max-width:650px){.reviewgrid>.reviewhero{order:0}.reviewgrid>aside:not(.reviewdecision){order:1}.reviewgrid>.reviewdecision{order:2}}
+
+.connection-control{margin-bottom:10px}.presenter-only{border-left:1px solid var(--line);padding-left:18px}
