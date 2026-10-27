@@ -219,3 +219,71 @@ Result: ______ Notes: ______________________________________
 | | | | | |
 | | | | | |
 | | | | | |
+
+## Future concepts — scenarios 13–18
+
+Select **Future concepts** in Workspace role. These are isolated exploratory flows; they do not operate the P0/P1 live job or real hardware. Each has an Assumptions and open questions section. See [scope addendum](FUTURE-CONCEPTS.md).
+
+### 13 — Exception coordination
+
+1. Open Exception coordination. Expect delayed-refill details and an unassigned owner.
+2. Confirm supply available and Open held task must be disabled initially.
+3. Assign responsible team. Expect Maya / ICON Logistics and supply-confirmation enabled.
+4. Confirm supply. Expect the exception resolved; construction task verification is still required.
+5. Change Exception to Missing ties. Expect the ownership/resolution reset and a ten-required/eight-available scenario.
+6. Assign and confirm supply, then Open held task. Expect the normal operator task, not an automatically completed task.
+
+Result: ______ Notes: ______________________________________
+
+### 14 — Pause and restart
+
+1. Open Pause and restart. Expect restart blocked and four ordered checks.
+2. Click Record check without a note. Expect a required-note prompt and no progress.
+3. Enter a note for each of the first three checks and record it. Expect one step to advance per confirmation.
+4. Enter the site lead's reason and Authorize restart. Expect restart authorized, not automatic task verification.
+5. Restart checklist from beginning. Expect all checks cleared and restart blocked again.
+
+Result: ______ Notes: ______________________________________
+
+### 15 — Multi-machine supervision
+
+1. Open Multi-machine supervision. Expect T-001 awaiting task review, T-002 printing normally, T-003 awaiting logistics.
+2. Select T-001 and assign the on-call team. Expect assignment for T-001 only.
+3. Select T-002. Expect no assignment action required; it remains printing normally.
+4. Select T-003. Expect independent logistics context and no inherited clearance/assignment.
+5. Return to T-001. Expect its assignment preserved.
+6. Open machine context. Expect the selected machine's contextual status. This is a concept summary, not a separate control connection.
+
+Result: ______ Notes: ______________________________________
+
+### 16 — Autonomous supply
+
+1. Open Autonomous site. Advance the first three supply stages.
+2. Expect a stop at Supervisor confirmation; Print sequence ready must still be pending.
+3. Click Supervisor confirms readiness. Expect sequence-ready; no real equipment moves.
+4. Reset the walkthrough, re-enter Future concepts and Autonomous site.
+5. Advance a stage, then Show failed delivery. Expect a held/retry message and return to the initial supply stage.
+6. Open assumptions. Expect hardware, sensing and material-validation dependencies.
+
+Result: ______ Notes: ______________________________________
+
+### 17 — Robotic placement
+
+1. Open Robotic placement. Expect initial human component presentation.
+2. Advance through path proposal to work-zone confirmation.
+3. Show blocked work zone. Expect stage 3 and a hold message.
+4. Explicitly Confirm work zone clear to advance; do not interpret the button as proof that a real zone was inspected.
+5. Advance placement. Expect final Human checks count and presence stage.
+6. Record inspection requirement. Expect a reminder that human inspection remains required, not automatic certification.
+
+Result: ______ Notes: ______________________________________
+
+### 18 — Wall-system redesign
+
+1. Open Wall system redesign. Expect current electrical sleeves versus a proposed integrated channel.
+2. Read the design/certification warning. It must not claim that components can safely be removed.
+3. Record design-review dependency. Expect a recorded dependency, not construction approval.
+4. Select Vertical core detail. Expect a different comparison and a fresh review-dependency action.
+5. Return to Print operator via the Presentation selector. Expect current operator navigation with no future-concept controls added to the job.
+
+Result: ______ Notes: ______________________________________

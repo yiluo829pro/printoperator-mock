@@ -70,3 +70,17 @@ Use the blue Presentation row to switch between **Print operator** (navy/turquoi
 ![Operator workspace](docs/screenshots/role-operator.png)
 
 ![ICON Support workspace](docs/screenshots/role-support.png)
+
+## P2 and moonshot concepts
+
+Select **Future concepts** in the Presentation workspace selector. Six separate views cover exception ownership, restart checks, fleet supervision, automated supply, robotic reinforcement placement and wall-system redesign. These are exploratory, isolated from the P0/P1 simulator and do not claim hardware feasibility.
+
+[Future scope and priorities](docs/FUTURE-CONCEPTS.md) · [Test scenarios 13–18](docs/SCENARIO-TEST-GUIDE.md#future-concepts--scenarios-1318)
+
+![Exception coordination](docs/screenshots/p2-exceptions.png)
+
+![Multi-machine supervision](docs/screenshots/p2-fleet.png)
+
+![Autonomous supply gate](docs/screenshots/moonshot-autonomy.png)
+
+![Wall system exploration](docs/screenshots/moonshot-wall.png)
