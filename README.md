@@ -30,8 +30,25 @@ Open `prototype.html` directly, or run:
 python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Visit http://127.0.0.1:4173. No dependencies or build step are needed. `index.html`, `style.css`, and `app.js` are the editable source; `prototype.html` is the standalone copy.
+Visit http://127.0.0.1:4173. No dependencies or build step are needed. `index.html`, `style.css`, `app.js`, and `p1.js` are the editable source; `prototype.html` is the standalone copy.
 
 ## Scope
 
-All content, job data, images, verification results, support responses and connectivity states are simulated. No machine or support service is connected and no real messages are sent. State exists for the current page session and resets on reload. This prototype does not certify installation quality or structural acceptance. P1 integrations are not included.
+All content, job data, images, verification results, support responses and connectivity states are simulated. No machine or support service is connected and no real messages are sent. State exists for the current page session and resets on reload. This prototype does not certify installation quality or structural acceptance. P1 flows are included as scripted interactions; hardware, AI and support integrations are not connected.
+
+## P1 feature walkthroughs
+
+- **Get help:** record/stop a voice note, edit its transcript, send the note, review suggested routing, and follow an urgent callback. No microphone or transcription API is used.
+- **Site status:** weather/mix checks, decision reasons, holds and site-lead release. All readings, limits and procedures are illustrative.
+- **Equipment:** camera-frame handoff, refill confirmation and pressure/flow alerts. Signals are scenario fixtures, not hardware feeds.
+- **Updates:** related issues, changes made, acknowledgment and a still-having-this-issue route.
+
+Choose a feature in the walkthrough bar or use the top navigation. Each opens directly to its own view. Presenter condition/signal controls exercise warning branches.
+
+![Voice note and transcript](docs/screenshots/p1-voice.png)
+
+![Weather hold](docs/screenshots/p1-weather.png)
+
+![Equipment signals](docs/screenshots/p1-equipment.png)
+
+![Operator updates](docs/screenshots/p1-updates.png)
