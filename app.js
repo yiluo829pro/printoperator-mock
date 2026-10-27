@@ -1,5 +1,5 @@
 const $=s=>document.querySelector(s);
-const scenarios={clean:'01 · Clear result',review:'02 · Human review',retake:'03 · Retake evidence',rework:'04 · Discrepancy & rework',offline:'05 · Offline & reconnect',help:'06 · Contextual help'};
+const scenarios={clean:'01 · Operator-centric task queue',review:'02 · Human review',retake:'03 · Retake evidence',rework:'04 · Discrepancy & rework',offline:'05 · Offline & reconnect',help:'06 · Contextual help'};
 const base=()=>({scenario:'clean',page:'operator',selected:'ties',ack:false,count:null,evidence:false,result:null,eligible:false,offline:false,drawer:null,helpStatus:null,flag:null,history:[],step:0,reworked:false,retaken:false,revision:0});
 let s=base(); let toastTimer;
 function event(name,detail,actor='Operator'){s.history.unshift({time:new Date().toLocaleTimeString([], {timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit',second:'2-digit'}),name,detail,actor});}
