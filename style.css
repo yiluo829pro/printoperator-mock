@@ -16,3 +16,5 @@ button{scroll-margin-block:100px}.presenter{pointer-events:none}.presenter butto
 .reference-link{border:0;border-radius:0;padding:0;min-height:32px;color:var(--cyan);text-decoration:underline;text-underline-offset:3px;text-align:left;font-size:12px}.reference-link:hover:not(:disabled){background:transparent;color:#a7fff6}
 
 .prototype-disclaimer{order:3;padding:20px 30px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.6}.drawer .prototype-disclaimer{padding:20px 0;margin-top:30px}
+
+.feature-name{font-size:15px;color:var(--white)}.outcome-select{width:100%;padding:10px;background:#101923;color:var(--white);border:1px solid #4a596b;border-radius:5px;margin-bottom:5px}
