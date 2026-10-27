@@ -6,6 +6,8 @@ A clickable proposal for a BuildOS-inspired live-job operator experience. The pu
 
 ## Documentation
 
+- [ICON discussion and decision record](docs/ICON-DISCUSSION-RECORD.md)
+
 - [Product requirements document (original specification baseline)](docs/PRD.md)
 - [Scenario test guide](docs/SCENARIO-TEST-GUIDE.md)
 - [Design research](docs/DESIGN-RESEARCH.md)
