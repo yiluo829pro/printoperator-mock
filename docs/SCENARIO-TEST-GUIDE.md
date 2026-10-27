@@ -100,7 +100,7 @@ Result A: ______ Result B: ______ Notes: ______________________
 
 Precondition: Print operator, Live job, connected.
 
-1. Click Get help. Expect the task/layer/job and machine context attached automatically.
+1. Click Get help. Expect an inline section within Your Action, with task/layer/job and machine context attached automatically. The model and queue stay visible; no global overlay appears. Use Back to task to close it.
 2. Click Record voice note. Expect a recording indicator and Stop recording. No browser microphone is actually used.
 3. Click Stop recording. Expect a predefined transcript.
 4. Edit the transcript, then click Use this note. Expect the edited text in the help note.
