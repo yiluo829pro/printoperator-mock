@@ -16,19 +16,19 @@ The PRD describes the functional target. The current release demonstrates P0/P1 
 
 Print visual → task queue → Your Action. Each action names its owner; the critical manual task includes layer-specific positions, component reference and count attestation.
 
-![Live job and operator task](docs/screenshots/live-job.png)
+![Live job and operator task](docs/screenshots/live-job.jpg)
 
 ## Verify before cover-up
 
 Acknowledge the task, confirm the placed count, capture a frame and select a verification outcome in the evidence step. Count matches, human review, retake and discrepancy/rework are branches of the same workflow.
 
-![Human review and decision](docs/screenshots/human-review.png)
+![Human review and decision](docs/screenshots/human-review.jpg)
 
 ## Help in context
 
 Get help attaches the job, task, layer, machine state and version. Flag issue records a reason in two clicks. Offline/reconnect states are available above the job status; Reset walkthrough is a presenter-only control.
 
-![Contextual help](docs/screenshots/contextual-help.png)
+![Contextual help](docs/screenshots/contextual-help.jpg)
 
 ## Run locally
 
@@ -53,13 +53,13 @@ All content, job data, images, verification results, support responses and conne
 
 Choose a feature in the walkthrough bar or use the top navigation. Each opens directly to its own view. Presenter condition/signal controls exercise warning branches.
 
-![Voice note and transcript](docs/screenshots/p1-voice.png)
+![Voice note and transcript](docs/screenshots/p1-voice.jpg)
 
-![Weather hold](docs/screenshots/p1-weather.png)
+![Weather hold](docs/screenshots/p1-weather.jpg)
 
-![Equipment signals](docs/screenshots/p1-equipment.png)
+![Equipment signals](docs/screenshots/p1-equipment.jpg)
 
-![Operator updates](docs/screenshots/p1-updates.png)
+![Operator updates](docs/screenshots/p1-updates.jpg)
 
 ## Role-separated workspaces and test scenarios
 
@@ -67,9 +67,9 @@ Use the blue Presentation row to switch between **Print operator** (navy/turquoi
 
 [Read the step-by-step scenario test guide](docs/SCENARIO-TEST-GUIDE.md) — 12 scenarios, expected outcomes, cross-role handoffs and a defect log.
 
-![Operator workspace](docs/screenshots/role-operator.png)
+![Operator workspace](docs/screenshots/role-operator.jpg)
 
-![ICON Support workspace](docs/screenshots/role-support.png)
+![ICON Support workspace](docs/screenshots/role-support.jpg)
 
 ## P2 and moonshot concepts
 
@@ -77,13 +77,13 @@ Select **Future concepts** in the Presentation workspace selector. Six separate 
 
 [Future scope and priorities](docs/FUTURE-CONCEPTS.md) · [Test scenarios 13–18](docs/SCENARIO-TEST-GUIDE.md#future-concepts--scenarios-1318)
 
-![Exception coordination](docs/screenshots/p2-exceptions.png)
+![Exception coordination](docs/screenshots/p2-exceptions.jpg)
 
-![Multi-machine supervision](docs/screenshots/p2-fleet.png)
+![Multi-machine supervision](docs/screenshots/p2-fleet.jpg)
 
-![Autonomous supply gate](docs/screenshots/moonshot-autonomy.png)
+![Autonomous supply gate](docs/screenshots/moonshot-autonomy.jpg)
 
-![Wall system exploration](docs/screenshots/moonshot-wall.png)
+![Wall system exploration](docs/screenshots/moonshot-wall.jpg)
 
 ## Help v1 and AI copilot v2
 
@@ -93,6 +93,8 @@ In Print operator / Live job, choose **Help version → v2 · AI copilot** to co
 
 [AI support scope](docs/AI-SUPPORT-V2.md) · [Test guide (22 scenarios)](docs/SCENARIO-TEST-GUIDE.md)
 
-![AI copilot inside task](docs/screenshots/ai-copilot.png)
+![AI copilot inside task](docs/screenshots/ai-copilot.jpg)
 
-![AI evaluation](docs/screenshots/ai-evaluation.png)
+![AI evaluation](docs/screenshots/ai-evaluation.jpg)
+
+[View all 18 full-page screenshots](docs/SCREENSHOT-GALLERY.md).

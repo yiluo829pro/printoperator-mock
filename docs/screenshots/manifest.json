@@ -1,0 +1,92 @@
+[
+  {
+    "file": "ai-copilot.jpg",
+    "width": 1280,
+    "height": 2528
+  },
+  {
+    "file": "ai-evaluation.jpg",
+    "width": 1280,
+    "height": 1449
+  },
+  {
+    "file": "contextual-help.jpg",
+    "width": 1280,
+    "height": 2015
+  },
+  {
+    "file": "human-review.jpg",
+    "width": 1280,
+    "height": 935
+  },
+  {
+    "file": "live-job.jpg",
+    "width": 1280,
+    "height": 1163
+  },
+  {
+    "file": "moonshot-autonomy.jpg",
+    "width": 1280,
+    "height": 1211
+  },
+  {
+    "file": "moonshot-reinforcement.jpg",
+    "width": 1280,
+    "height": 985
+  },
+  {
+    "file": "moonshot-wall.jpg",
+    "width": 1280,
+    "height": 985
+  },
+  {
+    "file": "p1-equipment.jpg",
+    "width": 1280,
+    "height": 964
+  },
+  {
+    "file": "p1-updates.jpg",
+    "width": 1280,
+    "height": 785
+  },
+  {
+    "file": "p1-voice.jpg",
+    "width": 1280,
+    "height": 2194
+  },
+  {
+    "file": "p1-weather.jpg",
+    "width": 1280,
+    "height": 1046
+  },
+  {
+    "file": "p2-exceptions.jpg",
+    "width": 1280,
+    "height": 1065
+  },
+  {
+    "file": "p2-fleet.jpg",
+    "width": 1280,
+    "height": 1229
+  },
+  {
+    "file": "p2-restart.jpg",
+    "width": 1280,
+    "height": 1198
+  },
+  {
+    "file": "role-operator.jpg",
+    "width": 1280,
+    "height": 1163
+  },
+  {
+    "file": "role-support.jpg",
+    "width": 1280,
+    "height": 785
+  },
+  {
+    "file": "support-requests.jpg",
+    "width": 1280,
+    "height": 765
+  }
+]
