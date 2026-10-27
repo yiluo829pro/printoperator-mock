@@ -84,3 +84,15 @@ Select **Future concepts** in the Presentation workspace selector. Six separate 
 ![Autonomous supply gate](docs/screenshots/moonshot-autonomy.png)
 
 ![Wall system exploration](docs/screenshots/moonshot-wall.png)
+
+## Help v1 and AI copilot v2
+
+The original embedded human-support flow is preserved on [`codex/help-v1`](https://github.com/yiluo829pro/printoperator-mock/tree/codex/help-v1) and as [standalone v1](versions/help-v1/prototype.html).
+
+In Print operator / Live job, choose **Help version → v2 · AI copilot** to converse inside the task card. In ICON Support, open **AI evaluation** for groundedness, helpfulness and harmlessness metrics with source passages, traces and human review. All conversations and scores are scenario fixtures, not actual model performance.
+
+[AI support scope](docs/AI-SUPPORT-V2.md) · [Test guide (22 scenarios)](docs/SCENARIO-TEST-GUIDE.md)
+
+![AI copilot inside task](docs/screenshots/ai-copilot.png)
+
+![AI evaluation](docs/screenshots/ai-evaluation.png)

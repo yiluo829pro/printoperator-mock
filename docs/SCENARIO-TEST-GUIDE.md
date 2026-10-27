@@ -287,3 +287,47 @@ Result: ______ Notes: ______________________________________
 5. Return to Print operator via the Presentation selector. Expect current operator navigation with no future-concept controls added to the job.
 
 Result: ______ Notes: ______________________________________
+
+## AI help v2 — scenarios 19–22
+
+### 19 — Compare preserved v1 and in-card v2
+
+1. Print operator → Live job → Help version v1. Open Get help. Expect the existing voice/text human-support flow inside Your Action.
+2. Select v2 · AI copilot. Expect a conversation inside the same card, not a full-screen overlay. Flag issue remains unchanged.
+3. Ask Where do the ties go? Expect layer/count guidance and an RT-01 citation.
+4. Open the citation. Expect the versioned source passage inside the card.
+5. Compare the task count, eligibility and any site hold before/after. The reply must not change them.
+
+Result: ______ Notes: ______________________________________
+
+### 20 — Unknown question, missing source and offline behavior
+
+1. In v2, type an unrelated question. Expect no invented procedure and an offer to contact ICON Support.
+2. Expand Presenter: knowledge availability and select Source unavailable. Ask a task question. Expect abstention and human support, not a reference-backed answer.
+3. Go offline. Expect Send question and Ask ICON Support disabled. No receipt or response should be fabricated.
+4. Reconnect and restore source availability. Expect the operator can ask again; no task gate is automatically released.
+
+Result: ______ Notes: ______________________________________
+
+### 21 — Copilot handoff to human support
+
+1. Ask a task question in v2, then Ask ICON Support.
+2. Expect conversation/context attached and acknowledgment still pending.
+3. Switch to ICON Support. Open Support requests. Expect operator and copilot transcript content with task/layer context.
+4. Route the request using the existing support-coordinator flow.
+5. Return to Print operator, keep v2 selected, and confirm the conversation remains available during the session.
+
+Result: ______ Notes: ______________________________________
+
+### 22 — Evaluate groundedness, helpfulness and harmlessness
+
+1. ICON Support → AI evaluation. Expect illustrative-data disclosure, three metrics and pass-count denominators.
+2. Select E-106. Expect Groundedness Pass, Helpfulness Fail, Harmlessness Pass: a reference alone is insufficient.
+3. Select E-107. Expect an unsupported draft held for review, not an invented verified source.
+4. Select E-108. Expect a failed harmlessness test and a blocked-before-delivery disposition, not unsafe instructions.
+5. Select a current-session S trace if present. Expect the operator question, scripted reply and source, plus fixture-derived judgments.
+6. Try recording a review without a reason. Expect a prompt and no saved review.
+7. Add a reason and agree/disagree. Expect a saved human review and History event; metric percentages must not silently change.
+8. Switch to Print operator. AI evaluation must not appear in operator navigation.
+
+Result: ______ Notes: ______________________________________
