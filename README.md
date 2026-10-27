@@ -52,3 +52,13 @@ Choose a feature in the walkthrough bar or use the top navigation. Each opens di
 ![Equipment signals](docs/screenshots/p1-equipment.png)
 
 ![Operator updates](docs/screenshots/p1-updates.png)
+
+## Role-separated workspaces and test scenarios
+
+Use the blue Presentation row to switch between **Print operator** (navy/turquoise), **Site lead** (amber), and **ICON Support** (purple). This is a presenter role preview, not production login or access control. Operator navigation includes Live job, Site status, Equipment and History. Support requests and Updates belong to ICON Support.
+
+[Read the step-by-step scenario test guide](docs/SCENARIO-TEST-GUIDE.md) — 12 scenarios, expected outcomes, cross-role handoffs and a defect log.
+
+![Operator workspace](docs/screenshots/role-operator.png)
+
+![ICON Support workspace](docs/screenshots/role-support.png)
