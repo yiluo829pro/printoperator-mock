@@ -4,6 +4,14 @@
 
 A clickable proposal for a BuildOS-inspired live-job operator experience. The published link is public; no GitHub access, installation or sign-in is required.
 
+## Documentation
+
+- [Product requirements document (original specification baseline)](docs/PRD.md)
+- [Scenario test guide](docs/SCENARIO-TEST-GUIDE.md)
+- [Design research](docs/DESIGN-RESEARCH.md)
+
+The PRD describes the functional target. The current release demonstrates P0/P1 through scripted clickable flows; it does not satisfy every production requirement.
+
 ## Operator-centric task queue
 
 Print visual → task queue → Your Action. Each action names its owner; the critical manual task includes layer-specific positions, component reference and count attestation.
