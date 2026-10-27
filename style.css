@@ -12,3 +12,5 @@ button{scroll-margin-block:100px}.presenter{pointer-events:none}.presenter butto
 @media(min-width:1500px){.workspace{grid-template-columns:minmax(400px,1fr) 260px 400px}}
 @media(min-width:651px) and (max-width:950px){.workspace{grid-template-columns:minmax(280px,1fr) 220px}.workspace>.taskpanel{grid-column:1/-1;grid-row:2}}
 @media(max-width:650px){.workspace>section{order:0}.workspace>aside:not(.taskpanel){order:1}.workspace>.taskpanel{order:2}.workspace .tasklist{display:block}.workspace .taskitem{min-width:0}}
+
+.reference-link{border:0;border-radius:0;padding:0;min-height:32px;color:var(--cyan);text-decoration:underline;text-underline-offset:3px;text-align:left;font-size:12px}.reference-link:hover:not(:disabled){background:transparent;color:#a7fff6}
