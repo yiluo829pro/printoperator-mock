@@ -1,6 +1,8 @@
 # BuildOS prototype — scenario test guide
 
-Version: role-separated P0 + P1 prototype. Test date: __________ Tester: __________
+Version 1.1 · Updated October 28, 2026 · Published version 11 scope: P0/P1, future concepts, help v1/v2 and all-tab inline assistance.
+
+Test date: __________ Tester: __________
 
 Live prototype: https://printoperator-mock.bronzegiant10.chatgpt.site
 
@@ -18,7 +20,7 @@ Use Pass / Fail / Not tested for each scenario. Record the step, actual result a
 |---|---|---|---|
 | Print operator | Dark navy with turquoise role badge | Live job, Site status, Equipment, History | Perform tasks, check local conditions, request help, record observations |
 | Site lead | Warm brown with amber role badge | Review, Site status, Equipment, History | Review count/presence and release resolved site holds |
-| ICON Support | Purple with lavender role badge | Support requests, Updates, History | Review/reroute help requests, own callbacks, publish issue updates |
+| ICON Support | Purple with lavender role badge | Support requests, Updates, History, AI evaluation | Review/reroute help requests, own callbacks, publish issue updates |
 
 The blue Presentation row and its Reset button belong to the presenter. Updates contains product/support issue records; it is not GitHub commit history. GitHub stores the prototype source and documentation separately.
 
@@ -191,7 +193,7 @@ Result: ______ Notes: ______________________________________
 
 Precondition: operator has optionally flagged an issue; do not reset before switching roles.
 
-1. Select ICON Support in the Presentation row. Expect purple support header, Support requests, Updates and History; no operator-only Live job navigation.
+1. Select ICON Support in the Presentation row. Expect purple support header, Support requests, Updates, History and AI evaluation; no operator-only Live job navigation.
 2. Open Updates. Expect issue groups on the middle queue and the proposed crew-facing update on the left.
 3. Select Tie reference clarified, Refill updates or Voice notes in Get help. Expect the detail to change immediately.
 4. Review the category, report counts, owner and proposed update. This is support/product issue information, not GitHub activity.
@@ -203,7 +205,7 @@ Limitation: publication is a local prototype state. No notification is delivered
 
 Result: ______ Notes: ______________________________________
 
-## Final checks
+## Shared final checks
 
 - Presentation controls remain visually separate from the three user workspaces.
 - Every screen and drawer ends with the simulation disclaimer.
@@ -331,3 +333,74 @@ Result: ______ Notes: ______________________________________
 8. Switch to Print operator. AI evaluation must not appear in operator navigation.
 
 Result: ______ Notes: ______________________________________
+
+## All-tab assistance and layout — scenarios 23–25
+
+Scope: Get help and Flag issue only. Reference/count editors, hold review, and support routing may still use their own review dialogs. Do not fail those dialogs against the assistance rule. Tabs without a help/flag entry point do not need a new button.
+
+Known limitation: human help currently attaches the reinforcement-task fixture even from site/equipment tabs. Record this separately from layout behavior; it is not module-specific context integration.
+
+### 23 — Inline help on every exposed operator and site-lead subtab
+
+Precondition: fresh session, connected, help v1. Run each row independently; close assistance before changing the subtab.
+
+| Role | Tab | Subtab | Action |
+|---|---|---|---|
+| Print operator | Live job | Reinforcement ties | Get help |
+| Print operator | Site status | Weather | Get help |
+| Print operator | Site status | Mix readiness | Get help |
+| Print operator | Equipment | Print-head camera | Get help |
+| Print operator | Equipment | Material delivery | Get help |
+| Print operator | Equipment | Pressure and flow | Get help |
+| Site lead | Site status | Weather and Mix readiness, separately | Get help |
+| Site lead | Equipment | All three equipment subtabs, separately | Get help |
+
+For each row:
+
+1. Select the role/tab/subtab, note the active view, count/eligibility, and hold state.
+2. Click Get help. Expect a region appended inside Your Action. No full-height right drawer, dark backdrop, or modal takeover. The visual and queue remain accessible.
+3. Enter a note; use Request help. Expect help status to change while the active module and task/hold eligibility remain unchanged.
+4. Click Back to task. Expect assistance closed and the same module visible.
+5. Reopen and press Escape. Expect assistance closed. Verify the main controls can still be clicked.
+6. Repeat at a narrower window width. The card may stack below content but must remain in document flow rather than becoming an overlay.
+
+Result per matrix row: ______ Notes: _______________________
+
+### 24 — Flag issue and navigation with assistance open
+
+1. Print operator → Live job → Flag issue. Expect inline reasons inside Your Action.
+2. Select Component missing. Expect the issue recorded, inline reasons closed, and a History event. The gate is not released by reporting.
+3. Reopen Flag issue and click Site status without closing it. If the flag region remains open, expect it inside the current action card with no backdrop or full right panel.
+4. Navigate to Equipment, then History. Any retained help/flag content must remain in-flow; when there is no action card, expect an in-flow assistance card in main content.
+5. Close assistance and verify module navigation works. Repeat steps 3–5 with Get help open.
+6. Switch workspace role with assistance open. Expect the role selector to clear assistance. No orphan backdrop or empty full-screen panel should remain.
+7. On any additional exposed Flag issue entry point, repeat inline open → reason selection → History checks. Do not add buttons to tabs that have none.
+
+Result: ______ Notes: ______________________________________
+
+### 25 — Presenter separation, operator wording and v2 regression
+
+1. Reload. Expect a blue Presentation first row with Workspace role and Reset walkthrough. Operational branding/navigation/connectivity appear below it.
+2. Expect BuildOS / Field operations and Go offline beside the connection status; Reset is not an operator task action.
+3. Live job: expect print visual → queue → Your Action. No duplicate Now - Layer 5 guidance card, no Site conditions / Camera & pump checks shortcut buttons. RT-01 is instruction item 4.
+4. Site lead → Review: expect evidence → queue → decision, matching the Live-job hierarchy.
+5. Return to operator Live job. Open v1 Get help, then select v2. Expect one in-card AI conversation, with no duplicate v1 section and no modal backdrop.
+6. Open a citation, close help, then open Flag issue. Expect the unchanged inline issue workflow. Selecting v2 must not replace Flag issue with chat.
+7. Navigate Site status / Equipment while v2 is selected. Current scope: those tabs retain inline human help; the v2 selector is only on operator Live job.
+8. Confirm the simulation disclaimer is at the end of each screen/assistance section and AI evaluation remains support-only.
+
+Result: ______ Notes: ______________________________________
+
+## Coverage and execution record
+
+| Requirement | Scenarios |
+|---|---|
+| F01–F06 core task/evidence/review | 01–05 |
+| F07–F10 help, connection, history, reset | 01–08, 23–25 |
+| F11–F15 P1 | 06–12 |
+| F16–F21 future concepts | 13–18 |
+| F22–F23 copilot and evaluation | 19–22, 25 |
+| All-tab help/flag placement | 23–24 |
+| Current layout and wording | 01, 04, 25 |
+
+This document defines expected manual checks; it does not claim they all passed. Prior local browser checks covered Site status help, Equipment help, and Live-job Flag issue. The expanded matrix needs a recorded run before claiming exhaustive coverage. Reload/reset persistence is intentionally excluded: state is session-only. Durable offline storage, real integrations, accessibility measurements and hardware suitability are separate production checks.

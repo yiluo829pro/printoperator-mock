@@ -8,11 +8,11 @@ A clickable proposal for a BuildOS-inspired live-job operator experience. The pu
 
 - [ICON discussion and decision record](docs/ICON-DISCUSSION-RECORD.md)
 
-- [Product requirements document (original specification baseline)](docs/PRD.md)
+- [Product requirements document (current prototype specification)](docs/PRD.md)
 - [Scenario test guide](docs/SCENARIO-TEST-GUIDE.md)
 - [Design research](docs/DESIGN-RESEARCH.md)
 
-The PRD describes the functional target. The current release demonstrates P0/P1 through scripted clickable flows; it does not satisfy every production requirement.
+The PRD reflects the current published P0/P1, future-concept and AI-help scope, with production gaps called out. The test guide includes 25 scenarios and an all-tab embedded-assistance matrix.
 
 ## Operator-centric task queue
 

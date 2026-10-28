@@ -1,12 +1,14 @@
 # ICON live-job operator demo — specification-based PRD
 
-Version 0.1 · October 26, 2026 · **Draft for Yi's review; implementation not authorized**
+Version 1.1 · Updated October 28, 2026 · **Current published prototype specification**
+
+Implementation and publication have been authorized. This revision reconciles P0/P1, P2/moonshot concepts, help v1/v2, role separation, and the all-tab embedded-assistance change in published version 11. Requirements describe the prototype unless explicitly marked as a production target. No production readiness is implied.
 
 ## 1. Purpose and source
 
 Build an interactive demonstration of how a BuildOS-inspired live-job task flow could help an operator understand a critical manual task, attest to the work, obtain contextual help, and resolve verification before the affected print area is covered.
 
-The deliverable after approval is a working browser demo with stateful interactions and simulated live job events. It is an interview prototype, not a connection to Titan, an official ICON product, or a validated inspection system.
+The delivered prototype is a working browser demo with stateful interactions and simulated live job events. It is an interview prototype, not a connection to Titan, an official ICON product, or a validated inspection system.
 
 Primary source: [ICON PM Case Study](https://docs.google.com/document/d/119UT3-4QOche85NT768a-HUNtdzbwvwV7gJ75IGSVnQ/edit?usp=sharing), main narrative and appendix: segmentation, operator journey, A Task queue/cards, B Decision signals, C Help/capture, D Verification, E Moonshot. Full text reviewed on October 26, 2026. Design reference: [ICON design research](DESIGN-RESEARCH.md).
 
@@ -49,7 +51,7 @@ Primary outcome (S): reduce avoidable delay attributable to the selected task pe
 
 ## 4. Proposed scope and priorities
 
-**P0 = required for the approved demo to be considered complete. P1 = later extension, not included by default.** Production sequencing remains task guidance and attestation first, validated automation later.
+**P0 and P1 are included as scripted prototype flows. P2 and moonshots are included in an isolated Future concepts workspace. Help v2 is an optional comparison with preserved v1.** Production sequencing remains task guidance and attestation first, validated automation later.
 
 | ID | Feature | Priority | Basis |
 |---|---|---|---|
@@ -66,10 +68,10 @@ Primary outcome (S): reduce avoidable delay attributable to the selected task pe
 | F11 | Push-to-talk recording/transcription | P1 | S C; browser permission and service dependency |
 | F12 | AI note classification, routing, proactive callback | P1 | S C; requires human operational model |
 | F13 | Approved weather/mix decision cards | P1 | S B; validated thresholds and content owners required |
-| F14 | Real camera inference / pump telemetry integration | P1 | S D; hardware/data feasibility unverified |
+| F14 | Camera evidence and pump/flow readiness fixtures | P1 | S D; real inference/telemetry remain production dependencies |
 | F15 | Recurring issue aggregation and feedback loop | P1 | S C; beyond core live-task demo |
 
-Out of this build: onboarding, post-job reporting, billing, production authentication, dispatch services, robot control, automated material/weather advice, autonomous-site hardware, multi-machine supervision, and production ML training. In-job History is included because it explains the current task's evidence, not as a reporting product.
+Outside the connected implementation: onboarding, post-job reporting, billing, production authentication, dispatch services, real robot control, validated automatic material/weather advice, autonomous hardware, real multi-machine control, and production ML training. Multi-machine supervision and autonomous-site interactions are included only as separate exploratory concepts. In-job History is included because it explains the current task's evidence, not as a reporting product.
 
 ## 5. End-to-end demo journey
 
@@ -89,10 +91,10 @@ Out of this build: onboarding, post-job reporting, billing, production authentic
 |---|---|
 | Live job / operator | Project, lot, print suite, phase, layer/item, simulated progress; spatial model; actor queue; selected task; help and connection status |
 | Task detail | Standard/version, component reference, ten positions, owner, task state, count confirmation/edit, evidence, verification result and cover status |
-| Help/issue drawer | Explicit help vs issue distinction, automatic context, reason choices, submission state and support availability |
+| Embedded help / issue | Get help and Flag issue render inside the current task/action card across tabs; no full-height right drawer, dimmed backdrop, or modal assistance overlay |
 | Reviewer workspace | Pending cases, task standard, operator attestation, image, simulated result/confidence, freshness, decision and reason |
 | In-job History | Ordered events, evidence links, revisions, model/policy identifiers, human decisions, current eligibility |
-| Presenter controls | Scenario selector, play/pause, event trigger, connection toggle, reviewer switch, restart/reset; visually separate from operator controls |
+| Presenter controls | Blue first row: Workspace role, Reset walkthrough, and Live-job Help version v1/v2. Scenario selectors live in the relevant fixture cards. Second row: BuildOS / Field operations or Support operations, tabs, role badge, connection and Go offline/Reconnect |
 
 Design direction: navy `#131720`, white primary text, legible blue-gray secondary text, cyan focus/progress, explicitly labeled orange exception and green successful states. Use the existing design research's task/phase/layer structure. Font choice depends on locally available, embeddable files; do not assume Lightspeed availability. A model may be an interactive schematic or lightweight 3D view; accurate task-position highlighting takes precedence over photorealism.
 
@@ -108,7 +110,7 @@ Design direction: navy `#131720`, white primary text, legible blue-gray secondar
 ### F02 — task standard
 
 - The critical card must show required count, units, component illustration, position IDs, approved-content status/version, and task scope.
-- Prototype content must say “Illustrative demo procedure”; no unvalidated ratio, installation standard, or weather limit is presented as ICON-approved.
+- Use direct operator guidance in the working cards. Put the simulation disclaimer at the end of every screen/assistance section; do not repeat marketing or “fictional/demo support” language in task instructions. References and weather/mix thresholds are illustrative, not ICON-approved procedures.
 - Missing or changed standard must block verification eligibility and explain the next action. A changed standard invalidates prior eligibility until re-reviewed against the new version.
 - **Acceptance:** all ten positions are distinguishable; the expected count agrees across model/card/check; an unavailable standard cannot yield a verified task.
 
@@ -123,13 +125,13 @@ Design direction: navy `#131720`, white primary text, legible blue-gray secondar
 ### F04 — evidence
 
 - Provide a synthetic evidence image without requiring a camera or network. Optional local image selection must support JPEG/PNG/WebP up to a proposed 10 MB limit, with readable validation errors.
-- Save evidence ID, job/task/layer/item, capture/import time, source, attestation revision, and sync status. A fixture must be labeled synthetic; an imported image is not proof of capture time or scene identity.
+- Save evidence ID, job/task/layer/item, capture/import time, source, attestation revision, and sync status. A fixture must be disclosed by the screen/footer as simulated; an imported image is not proof of capture time or scene identity.
 - When offline, save to a local queue where supported; display queued vs synced states explicitly. If storage fails, display failure and preserve the unresolved gate.
-- **Acceptance:** offline capture survives reload on the same browser when local storage is available; reconnect processes a record once; failed save never shows success.
+- **Prototype acceptance:** offline capture is queued within the current page session; reconnect makes it available without automatically verifying the task. Reload clears it. **Production target:** durable local storage, storage-failure handling, and idempotent sync across reloads.
 
 ### F05 — verification and cover gate
 
-- The demo must explicitly label all verification results as simulated. Arbitrary uploaded images must not receive a fabricated claim of actual visual analysis.
+- The screen/footer must explicitly disclose that verification results are simulated. Arbitrary uploaded images must not receive a fabricated claim of actual visual analysis.
 - Attempt inputs must reference the current standard, attestation, and evidence revisions. Outputs: candidate label, observed count/presence, capture quality, confidence, model version, and policy version.
 - Demo-only policy: a matching count/presence result with usable evidence and confidence at or above 0.95 may produce `Count/presence verified — simulated`. This value is illustrative and is not a validated production threshold.
 - Uncertain results route to review. Poor capture requests a retake. Possible mismatch routes to human review regardless of confidence; it never becomes an AI-only adverse finding.
@@ -147,11 +149,13 @@ Design direction: navy `#131720`, white primary text, legible blue-gray secondar
 
 ### F07 — help and issue capture
 
-- A single Help action opens the task-bound support drawer with job, layer/item, machine state, software/content version, connection state, and data age attached automatically.
+- Get help opens an inline region inside the current task/action card on every tab where it is available, including Live job, Site status (Weather and Mix readiness), and Equipment (camera, delivery, pressure/flow). Flag issue follows the same shared rule. If no action card exists, assistance uses an in-flow card in the main content. Never use a full-height right assistance panel, modal backdrop, or whole-software overlay.
+- Back to task closes assistance without changing the current module or task gate. Existing form fields and action controls remain accessible. Navigation may retain open assistance; if retained, it must still render inline. Reference/count editors and authorized review dialogs are separate interactions and are not covered by this assistance-only rule.
+- Current limitation: the shared human-help context remains the reinforcement task fixture even from site/equipment screens. Module-specific context snapshots are a production follow-up, not implemented context accuracy. Help v2 is selectable only on Print operator / Live job.
 - Help states: draft, queued locally, submitted in simulation, acknowledged in simulation, assigned, resolved. Do not show real receipt, availability, or response-time promises.
 - Two-tap issue capture means tap “Flag issue,” then one reason. Reasons include unclear instruction, count/position differs, component missing, equipment/material issue, and other. Optional text can follow; sending a report must not require a note.
 - Urgent help is an explicit separate route, not dependent on classification. In this prototype it opens a labeled simulated escalation with acknowledgment controls; it places no call and sends no message.
-- **Acceptance:** a flag can be recorded with two taps; its context is correct; offline requests say queued and do not show acknowledged; a flag by itself neither pauses nor releases the cover gate. Help and cover eligibility remain separate.
+- **Acceptance:** all exposed help/flag entry points remain inline; a flag can be recorded with two taps; the attached fixture context is visible; offline requests say queued and do not show acknowledged; a flag by itself neither pauses nor releases the cover gate. Help and cover eligibility remain separate.
 
 ### F08 — connection, stale state, and sync
 
@@ -169,8 +173,8 @@ Design direction: navy `#131720`, white primary text, legible blue-gray secondar
 ### F10 — reproducible scenarios
 
 - Required scenarios: clean matching check; uncertain/human review; poor image/retake; possible mismatch/human-confirmed rework; offline capture/reconnect; context-rich help/issue flag.
-- Presenter can pause simulated time, trigger the next event, switch actor workspace, and reset to a known fixture. Scenario result is deterministic.
-- Reset clears this demo's state only; warn if it will discard unsynced demo records. No external systems are affected.
+- Presenter can switch workspace, select verification/condition/equipment fixtures, compare help versions, and reset to a known session. Continuous time playback and arbitrary event injection are not implemented.
+- Reset clears only the in-memory walkthrough. Unsynced records are discarded; a discard-confirmation dialog is a future usability target, not currently implemented. No external systems are affected.
 - **Acceptance:** each scenario can be replayed without developer tools, page errors, live APIs, or timing-dependent luck.
 
 ## 8. State and gate contract
@@ -223,8 +227,8 @@ Real evaluation (S/V): episode research and baseline → walkthrough → interna
 
 ## 11. Nonfunctional and demo delivery requirements
 
-- Run locally after setup without external APIs or runtime network access. Hosting is a later decision; GitHub is optional.
-- Recommended browser state persistence: IndexedDB for evidence and structured events. Reload restores the active scenario; reset is available. Production cross-device sync is excluded.
+- Published at https://printoperator-mock.bronzegiant10.chatgpt.site/ with source/docs in https://github.com/yiluo829pro/printoperator-mock. Standalone prototype.html also runs locally without API integrations.
+- Current state is in memory: role/tab changes preserve the session; reload and Reset walkthrough clear it. Durable offline storage/IndexedDB and cross-device synchronization remain unimplemented production targets.
 - Target laptop presentation and landscape tablet layouts (approximately 1366×768 and 1024×768). Primary controls at least 48×48 CSS px, keyboard reachable, with visible focus and explicit labels. Test daylight/glove suitability later on actual hardware.
 - Status must use text/icons in addition to color. Normal text target contrast at least 4.5:1; avoid copying the source's low-contrast tiny metadata.
 - Local interactions should respond within 200 ms on the presentation device; simulated inference delays are intentional and labeled. Heavy graphics must not compromise the core workflow.
@@ -235,7 +239,7 @@ Real evaluation (S/V): episode research and baseline → walkthrough → interna
 
 Source D's intended chain is: task/layer/item → attestation → pre-cover image → detector outputs → confidence policy → scoped result/human review → in-job evidence record. A detector needs validated machine-readable outputs; a language prompt alone is not proof that ties are present or correctly installed. Count/presence checking does not certify installation quality or structural acceptance.
 
-Source C's optional chain is: voice/text note → transcription → intent/urgency suggestion → human-reviewed routing. Explicit urgent help must function even when this chain fails. The prototype may explain this future chain but must disclose if it is not executed.
+Source C's optional chain is: voice/text note → transcription → intent/urgency suggestion → human-reviewed routing. Explicit urgent help must function even when this chain fails. The prototype demonstrates this chain using scripted transcript/routing fixtures and discloses that no live services are executed.
 
 Production blockers: validated task standards and accountable owners; compatible hardware/capture access; scene visibility and position alignment; supported pre-cover control integration; calibrated per-task thresholds and representative labeled evaluation data; reviewer authority/capacity; offline release policy; approved support availability/escalation; evidence governance. These block production, not a clearly labeled simulation.
 
@@ -244,20 +248,67 @@ Production blockers: validated task standards and accountable owners; compatible
 - All six required scenarios pass their acceptance criteria with reset/replay.
 - No critical path reaches cover eligibility through missing evidence, low-confidence result, possible mismatch alone, wrong revision, or disconnected reviewer.
 - New evidence/count revisions invalidate prior results; late events cannot restore invalid eligibility.
-- Offline records survive reload and sync once; storage errors and failed requests remain visible.
+- Offline queued records are demonstrated only within the page session; reload clears them. Durable storage and failure recovery are tracked as production gaps.
 - In-job History reconstructs a retake/rework path; no AI-only adverse record or installation certification appears.
 - Laptop/tablet layouts remain legible; keyboard and primary target-size checks pass.
 - Core demo runs with external network unavailable after setup and labels synthetic data/results consistently.
-- Provide start instructions and a short presenter walkthrough; approval of this PRD precedes all implementation.
+- Provide current run instructions and the scenario test guide. P0, P1, future concepts, AI comparison, and publication were approved during the discussion.
 
-## 14. Decisions for Yi's review
+## 14. Current workspace and layout requirements
 
-Recommended defaults, not yet approved:
+| Role | Style | Navigation |
+|---|---|---|
+| Print operator | Navy / turquoise | Live job, Site status, Equipment, History |
+| Site lead | Amber | Review, Site status, Equipment, History |
+| ICON Support | Purple | Support requests, Updates, History, AI evaluation |
+| Future concepts | Teal / explicit concept banner | Six P2/moonshot views |
 
-1. **Demo anchor:** reinforcement ties on L5, ten illustrative planned positions; other queue items provide context.
-2. **Build scope:** all P0 features and six scenario branches above; P1 features remain future concepts.
-3. **Live behavior:** stateful simulated events and verification, with deterministic presenter controls; no live Titan connection or claimed trained vision model.
-4. **Reviewer surface:** a second workspace in the same app, switched by presenter; production identity/authorization is not simulated as real security.
-5. **Delivery:** local browser demo first; decide hosting and repository when implementation is approved.
+- Live job uses Print visual → Task queue → Your Action. Review uses evidence → Review queue → Human decision.
+- Brand text is BuildOS / Field operations; support uses / Support operations.
+- First row is the distinct blue Presentation row; Reset belongs to the presenter. Connectivity and Go offline are in the operational header below it.
+- Task instructions live in Your Action. Do not restore the duplicate “Now - Layer 5” guidance card. RT-01 is a link in instruction item 4.
+- Use operator-facing Get help wording. Do not restore marketing headings or duplicate Site conditions / Camera & pump checks tab shortcuts.
+- Role selection is a presentation mechanism, not authentication. Updates is support/product issue handling, not GitHub commit history.
 
-Approval wording can be simple: approve this scope, or identify feature/flow changes. Unresolved production feasibility is retained explicitly rather than treated as approval to ship.
+## 15. P1 implemented interaction requirements
+
+- F11: scripted record/stop, predefined transcript, editable text, Use this note; no microphone or transcription service. Offline voice unavailable.
+- F12: suggested routing with human confirmation, explicit urgent priority retained, callback ownership/completion recorded by support; no real message/call.
+- F13: weather and mix fixtures, reason-required decisions, warning holds, resolution and site-lead release; a site hold blocks continuation independently of task verification.
+- F14: camera evidence opens the task without granting eligibility; delivery/pressure/flow fixtures support check or review and hold; no inferred diagnosis.
+- F15: recurring issue group selection, owner-review note, publish-to-crews fixture state and History event; no real notification.
+
+## 16. P2 and moonshot requirements — F16–F21
+
+| ID | Priority | Feature | Required interaction |
+|---|---|---|---|
+| F16 | P2 first | Exception coordination | Assign owner before confirming supply; missing-ties/refill scenarios; no task auto-completion |
+| F17 | P2 second | Pause and restart | Four ordered note-required stages; final site-lead authorization |
+| F18 | P2 third | Multi-machine supervision | Independent machine selection/assignment; no inherited clearance |
+| F19 | Moonshot | Autonomous supply | Staged progress, failed-delivery branch, supervisor confirmation before ready |
+| F20 | Moonshot | Robotic placement | Work-zone confirmation, blocked-zone branch, human inspection requirement |
+| F21 | Moonshot | Wall-system redesign | Separate alternatives and recorded design-review dependency; no certification claim |
+
+These flows use separate session state from P0/P1. Three machines are fixtures, not a validated staffing ratio. See [Future concepts](FUTURE-CONCEPTS.md) for prerequisites and acceptance rules.
+
+## 17. Help v2 and AI evaluation — F22–F23
+
+- F22: Preserve v1 at codex/help-v1 and versions/help-v1/prototype.html. V1 remains default. On operator Live job, Help version switches Get help to an in-card AI conversation. Flag issue stays unchanged.
+- Scripted questions/replies and inline versioned citations; unavailable/unknown source abstention; offline answer/escalation disabled; human handoff carries the transcript. Replies never operate equipment, release holds, or certify work.
+- F23: ICON Support-only AI evaluation. Groundedness checks source support; Helpfulness checks usefulness for the specific problem; Harmlessness checks negative live-job/human impact.
+- Eight fixed traces plus current-session scripted traces; explicit pass denominators and illustrative-data disclosure. Human review needs a reason and is logged separately without silently changing scores.
+- No real model, internal wiki retrieval, benchmark, microphone, printer or support service is connected. See [AI support v2](AI-SUPPORT-V2.md).
+
+## 18. Traceability and verification status
+
+[Scenario guide](SCENARIO-TEST-GUIDE.md): 01–05 core workflow/review; 06–08 help/offline; 09–12 P1; 13–18 future concepts; 19–22 AI; 23–25 all-tab embedded assistance and layout regression.
+
+The guide is a manual acceptance plan, not proof every case has been executed. Record Pass/Fail/Not tested for each run. Earlier local browser checks verified inline Site status help, Equipment help, and Live-job Flag issue. Do not infer all role/subtab combinations passed from those checks.
+
+Known specification targets not fully implemented include durable evidence storage, arbitrary local-image import/validation, complete production event schema, standard-version mutation, fine-grained freshness timing, production identity/authorization, and real integrations. Data and measurement schemas in sections 9–10 remain target contracts, not evidence of backend implementation. Accessibility/latency targets require measured verification.
+
+## 19. Revision history
+
+- October 26: original planning baseline.
+- October 27: P0/P1 and role workflows; future concepts; help v1 preservation and v2/evaluation; full-page screenshots; all-tab assistance fix published as version 11.
+- October 28: specification and test guide reconciled with current source and published scope; stale approval/hosting/scope statements removed; implementation gaps and all-tab regressions made explicit.
